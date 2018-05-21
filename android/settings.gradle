@@ -1,0 +1,3 @@
+rootProject.name = 'collision_care_without_login'
+
+include ':app'
