@@ -10,7 +10,7 @@ import { transparentHeaderStyle } from "../styles/navigation";
 import colors from "../styles/colors";
 import NavBarButton from "../components/buttons/NavBarButton";
 import IconHeader from "react-native-vector-icons/Feather";
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from "react-native-vector-icons/Ionicons";
 
 export default class ReportScreen extends Component {
   // cannot find a way to edit header
@@ -26,22 +26,22 @@ export default class ReportScreen extends Component {
     headerStyle: transparentHeaderStyle,
     headerTintColor: colors.beige,
     tabBarIcon: ({ tintColor }) => (
-      <Icon name="pencil-square-o" size={22} color={colors.blue01} />
+      <Icon name="md-search" size={22} color={colors.blue01} />
     )
   });
 
   render() {
     return (
       <KeyboardAvoidingView style={styles.wrapper} behavior="padding">
-          <ScrollView 
-            style={styles.scrollview}
-            contentContainerStyle={styles.scrollViewContent}
-          >
-              <Text style={styles.header}>Report</Text>
-              <Text style={styles.subHeader}>
-                Please, follow the instructions thoroughly.
-                </Text>
-          </ScrollView>
+        <ScrollView
+          style={styles.scrollview}
+          contentContainerStyle={styles.scrollViewContent}
+        >
+          <Text style={styles.header}>Search</Text>
+          <Text style={styles.subHeader}>
+            Please, follow the instructions thoroughly.
+          </Text>
+        </ScrollView>
       </KeyboardAvoidingView>
     );
   }
@@ -54,10 +54,10 @@ const styles = StyleSheet.create({
     backgroundColor: colors.blue01
   },
   scrollview: {
-    paddingTop: 20,
+    paddingTop: 20
   },
   scrollViewContent: {
-    paddingBottom: 80,
+    paddingBottom: 80
   },
   container: {
     padding: 10,
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
-    header: {
+  header: {
     paddingTop: 20,
     paddingBottom: 20,
     paddingLeft: 20,
@@ -82,6 +82,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "200",
     textAlign: "center"
-  },
-
+  }
 });

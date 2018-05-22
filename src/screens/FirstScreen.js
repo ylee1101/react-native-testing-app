@@ -11,8 +11,6 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import colors from "../styles/colors";
 import RoundedButton from "../components/buttons/RoundedButton";
 import iPhoneSize from "../helpers/utils";
-// import { NavigationActions } from "react-navigation";
-import TermsScreen from "./TermsScreen";
 import { transparentHeaderStyle } from "../styles/navigation";
 
 const size = iPhoneSize();
@@ -23,10 +21,6 @@ if (size === "small") {
   termsTextSize = 13;
   headingTextSize = 25;
 }
-
-// const navigateToTabsAction = NavigationActions.navigate({
-//   routeName: "Terms"
-// });
 
 export default class FirstScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -47,10 +41,10 @@ export default class FirstScreen extends Component {
     navigate("TermsScreen");
   }
 
-    withoutLoginPress() {
-      const { navigate } = this.props.navigation;
-      navigate("ReportScreen");
-    }
+  withoutLoginPress() {
+    const { navigate } = this.props.navigation;
+    navigate("TabNavigator");
+  }
 
   render() {
     return (
@@ -80,7 +74,10 @@ export default class FirstScreen extends Component {
               Account, or More options, I agree to Assured
             </Text>
             <Text style={styles.termsText}>Performance Network's </Text>
-            <TouchableHighlight onPress={this.termsPress} style={styles.linkButton}>
+            <TouchableHighlight
+              onPress={this.termsPress}
+              style={styles.linkButton}
+            >
               <Text style={styles.termsText}>Terms of Service</Text>
             </TouchableHighlight>
             <Text style={styles.termsText}>.</Text>
