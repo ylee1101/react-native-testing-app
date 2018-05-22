@@ -78,9 +78,9 @@ const styles = StyleSheet.create({
   subHeader: {
     paddingTop: 20,
     paddingBottom: 20,
+    paddingLeft: 20,
     color: colors.beige,
     fontSize: 16,
     fontWeight: "200",
-    textAlign: "center"
   }
 });
