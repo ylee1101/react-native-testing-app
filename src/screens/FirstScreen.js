@@ -30,6 +30,7 @@ if (size === "small") {
 
 export default class FirstScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
+    title: null,
     headerStyle: transparentHeaderStyle,
     headerTintColor: colors.beige
   });
